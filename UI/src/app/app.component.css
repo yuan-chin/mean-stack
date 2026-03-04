@@ -1,0 +1,128 @@
+/* ============================= */
+/* CLEAN WHITE & BLACK THEME */
+/* ============================= */
+
+body {
+  background-color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #000000;
+  margin: 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 75%;
+  margin: 40px auto;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #000;
+}
+
+/* ============================= */
+/* FORM SECTION */
+/* ============================= */
+
+.form-card {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.form-card input {
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
+
+.form-card input:focus {
+  outline: none;
+  border: 2px solid #000;
+}
+
+/* ADD / UPDATE BUTTON */
+.add-btn {
+  grid-column: span 2;
+  padding: 12px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #333333;
+}
+
+/* ============================= */
+/* BOOK LIST */
+/* ============================= */
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.book-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.book-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* EDIT & DELETE SAME STYLE */
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #333333;
+}
+
+/* EMPTY MESSAGE */
+.empty {
+  font-size: 18px;
+  font-weight: 500;
+}

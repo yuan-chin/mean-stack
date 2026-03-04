@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="title">Books Application</h1>
+
+  <div class="form-card">
+    <input id="newBook" placeholder="Book Title">
+    <input id="newDesc" placeholder="Description">
+    <input id="newPrice" placeholder="Price" type="number">
+    <input id="newAuthor" placeholder="Author">
+    <input id="newGenre" placeholder="Genre">
+
+    <button class="add-btn" (click)="addBook()"> {{ editingId ? 'Update Book' : 'Add Book' }} </button>
+  </div>
+
+  <div class="books-list">
+    @for (book of books; track book.id) {
+      <div class="book-card">
+        <h3>{{ book.title }}</h3>
+        <p><strong>Description:</strong> {{ book.desc }}</p>
+        <p><strong>Price:</strong> ${{ book.price }}</p>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+      <div class="action-buttons">
+        <button class="edit-btn" (click)="editBook(book)">
+          Edit
+        </button>
+        <button class="delete-btn" (click)="deleteBook(book.id)">
+          Delete
+        </button>
+      </div>
+  </div>
+    } @empty {
+      <p class="empty">No books available</p>
+    }
+  </div>
+</div>
+
+<router-outlet />
